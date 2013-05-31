@@ -8,7 +8,7 @@ gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 
 gem 'sqlite3'
 gem 'thin'
-
+gem 'json'
 # Gems used only for assets and not required
 # in production environments by default.
 # group :assets do
@@ -29,11 +29,14 @@ group :test do
   gem 'database_cleaner'
   gem 'guard-rspec'
   gem 'guard-migrate'
+  gem 'ruby_gntp'
   gem 'migration_test_helper'
   gem 'json_spec'
 end
 
 group :test, :development do
+  gem "better_errors"
+  gem "binding_of_caller"
   gem "api_taster"
   gem "rspec-rails", "~> 2.0"
   gem 'rb-readline'

@@ -1,4 +1,7 @@
 Clams::Application.routes.draw do
+  # post '/where' => 'controller#action'
+
+  resources :comments, :defaults => {:format => :json}
   # Access API description at /api_taster
   mount ApiTaster::Engine => "/api_taster" if Rails.env.development?
 

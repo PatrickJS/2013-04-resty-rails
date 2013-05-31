@@ -1,15 +1,25 @@
 class CommentsController < ApplicationController
+  respond_to :json
   # GET /comments
   def index
+
   end
 
   # GET /comments/1
   def show
+    @comment = Comment.find(params[:id])
+    respond_with @comment
   end
 
 
   # POST /comments
   def create
+    @comment = Comment.new(params[:comment])
+    if @comment.save
+      head :created
+    else
+      head :bad_request
+    end
   end
 
   # PUT /comments/1
