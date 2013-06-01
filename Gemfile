@@ -9,6 +9,7 @@ gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
 gem 'sqlite3'
 gem 'thin'
 gem 'json'
+# gem 'backbone-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 # group :assets do
