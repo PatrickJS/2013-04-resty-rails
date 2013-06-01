@@ -1,5 +1,5 @@
-var UserModel = Backbone.Model.extend({
-  defaults: {
-    id: set('id')
-  }
-});
+// var UserModel = Backbone.Model.extend({
+//   defaults: {
+//     id: set('id')
+//   }
+// });
