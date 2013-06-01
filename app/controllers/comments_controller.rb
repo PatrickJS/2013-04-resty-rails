@@ -2,6 +2,8 @@ class CommentsController < ApplicationController
   respond_to :json
   # GET /comments
   def index
+    @comment = Comment.all
+    respond_with @comment
 
   end
 
@@ -24,9 +26,18 @@ class CommentsController < ApplicationController
 
   # PUT /comments/1
   def update
+    @comment = Comment.find(params[:id])
+    if @comment.update_attributes(:content => params[:comment][:content])
+      head :no_content
+    else
+      head :bad_request
+    end
   end
 
   # DELETE /comments/1
   def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    head :no_content
   end
 end
