@@ -3,7 +3,7 @@ Clams::Application.routes.draw do
 
   resources :comments, :defaults => {:format => :json}
   resources :groups, :defaults => {:format => :json}
-  # resources :posts, :defaults => {:format => :json}
+  resources :posts, :defaults => {:format => :json}
   # resources :statuses, :defaults => {:format => :json}
   # resources :subscriptions, :defaults => {:format => :json}
   # resources :users, :defaults => {:format => :json}
