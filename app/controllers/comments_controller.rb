@@ -3,14 +3,14 @@ class CommentsController < ApplicationController
   # GET /comments
   def index
     @comment = Comment.all
-    respond_with @comment
+    render :json => @comment
 
   end
 
   # GET /comments/1
   def show
     @comment = Comment.find(params[:id])
-    respond_with @comment
+    render :json => @comment
   end
 
 

@@ -3,13 +3,13 @@ class GroupsController < ApplicationController
   # GET /groups
   def index
     @group = Group.all
-    respond_with @group
+    render :json => @group
   end
 
   # GET /groups/1
   def show
     @group = Group.find(params[:id])
-    respond_with @group
+    render :json => @group
   end
 
 

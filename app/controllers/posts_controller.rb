@@ -3,13 +3,13 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @post = Post.all
-    respond_with @post
+    render :json => @post
   end
 
   # GET /posts/1
   def show
     @post = Post.find(params[:id])
-    respond_with @post
+    render :json => @post
   end
 
   # POST /posts
