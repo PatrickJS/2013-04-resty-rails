@@ -2,6 +2,12 @@ Clams::Application.routes.draw do
   # post '/where' => 'controller#action'
 
   resources :comments, :defaults => {:format => :json}
+  resources :groups, :defaults => {:format => :json}
+  # resources :posts, :defaults => {:format => :json}
+  # resources :statuses, :defaults => {:format => :json}
+  # resources :subscriptions, :defaults => {:format => :json}
+  # resources :users, :defaults => {:format => :json}
+
   # Access API description at /api_taster
   mount ApiTaster::Engine => "/api_taster" if Rails.env.development?
 
